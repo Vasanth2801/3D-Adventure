@@ -4,7 +4,7 @@ using UnityEngine.Events;
 
 public class Interactor : MonoBehaviour
 {
-   public bool isInRange;
+    public bool isInRange;
 
     public UnityEvent interactAction;
 
@@ -33,5 +33,3 @@ public class Interactor : MonoBehaviour
         }
     }
 }
-
-
