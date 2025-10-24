@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -17,6 +18,14 @@ public class PlayerMovement : MonoBehaviour
     public Transform attackPoint;
     public float attackRange = 0.5f;
     public LayerMask enemyLayer;
+    //public int maxHealth = 100;
+    //public int currentHealth;
+    //public Image healthBar;
+
+    private void Start()
+    {
+       // currentHealth = maxHealth;
+    }
 
     private void Update()
     {
@@ -55,6 +64,13 @@ public class PlayerMovement : MonoBehaviour
         {
             Idle();
         }
+
+       // healthBar.fillAmount = Mathf.Clamp((float)currentHealth / maxHealth, 0, 1);
+       // if (currentHealth <= 0)
+        {
+         //   Destroy(gameObject);
+           // Debug.Log("Player Died");
+        }
     }
 
     void Attack()
@@ -65,6 +81,7 @@ public class PlayerMovement : MonoBehaviour
             Collider[] hitInfo = Physics.OverlapSphere(attackPoint.position, attackRange, enemyLayer);
             foreach(Collider enemy in hitInfo)
             {
+                EnemyAI.instance.TakeDamage(20);
                 Debug.Log("We hit " + enemy.name);
             }
         }
