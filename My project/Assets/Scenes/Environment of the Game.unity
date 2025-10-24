@@ -258,6 +258,37 @@ Transform:
   - {fileID: 51245755}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &672427022
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 672427023}
+  m_Layer: 7
+  m_Name: AttackPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &672427023
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 672427022}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.659, y: 1.049, z: 0.754}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8295653596664335160}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &732359851
 GameObject:
   m_ObjectHideFlags: 0
@@ -272,7 +303,7 @@ GameObject:
   - component: {fileID: 732359853}
   - component: {fileID: 732359857}
   - component: {fileID: 732359858}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: EnemyAI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -574,7 +605,7 @@ Transform:
   m_GameObject: {fileID: 915786652}
   serializedVersion: 2
   m_LocalRotation: {x: 0.2534013, y: -0.00000004063335, z: 0.00000001064395, w: 0.9673613}
-  m_LocalPosition: {x: -337, y: -4.67, z: -4}
+  m_LocalPosition: {x: -337, y: -4.77, z: -4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1023,7 +1054,7 @@ Transform:
   m_GameObject: {fileID: 1876719576}
   serializedVersion: 2
   m_LocalRotation: {x: 0.2534013, y: -0.000000039660005, z: 0.000000006928223, w: 0.96736133}
-  m_LocalPosition: {x: -337, y: -4.67, z: -4}
+  m_LocalPosition: {x: -337, y: -4.77, z: -4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1042,6 +1073,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
   controller: {fileID: 8434336322926606615}
+  animator: {fileID: 6369091894237572850}
   speed: 12
   smoothSpeed: 0.025
   cam: {fileID: 915786655}
@@ -1051,6 +1083,11 @@ MonoBehaviour:
   groundMask:
     serializedVersion: 2
     m_Bits: 64
+  attackPoint: {fileID: 672427023}
+  attackRange: 0.5
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!4 &4933595070733930059
 Transform:
   m_ObjectHideFlags: 0
@@ -3661,12 +3698,13 @@ Transform:
   m_GameObject: {fileID: 9015784119301941972}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -337, y: -6.92, z: 0}
+  m_LocalPosition: {x: -337, y: -7.02, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4933595070733930059}
   - {fileID: 6369091894228500782}
+  - {fileID: 672427023}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!143 &8434336322926606615
