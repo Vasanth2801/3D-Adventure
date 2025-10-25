@@ -12083,7 +12083,7 @@ GameObject:
   - component: {fileID: 1346007776}
   - component: {fileID: 1346007775}
   m_Layer: 0
-  m_Name: CineMachine
+  m_Name: Cinemachine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
