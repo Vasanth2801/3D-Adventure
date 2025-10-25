@@ -16,7 +16,7 @@ public class PortalGate : MonoBehaviour
                 {
                     isDoorOpen = true;
                     keyManager.keyCount--;
-                    SceneManager.LoadScene(1);
+                    SceneManager.LoadScene(2);
                 }
             }
         }
